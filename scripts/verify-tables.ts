@@ -59,7 +59,7 @@ async function verifyTables() {
 
     // Get all tables in database
     const [rows] = await connection.query(`SHOW TABLES`);
-    const existingTables = (rows as any[]).map(row => Object.values(row)[0]);
+    const existingTables = (rows as any[]).map(row => Object.values(row)[0] as string);
 
     console.log('✅ Existing tables in database:');
     existingTables.sort().forEach(table => console.log(`   - ${table}`));
