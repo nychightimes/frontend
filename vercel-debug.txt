@@ -1,0 +1,851 @@
+Domain to test (e.g. example.com): 
+┌───────────────────────────────────────
+├─────── Fetching IP Addresses
+│
+│ 105thdelivery.com IP range: 216.150.1.1, 216.150.1.65, 216.150.1.129, 216.150.1.193, 216.150.16.1, 216.150.16.65, 216.150.16.129, 216.150.16.193
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── STARTING
+│
+│ Domain to test: 105thdelivery.com 
+│ Timestamp (UTC): Tue Nov 18 11:57:22 UTC 2025
+│ Timestamp (Local): Tue Nov 18 16:57:22 PKT 2025
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── IP Information 
+
+{
+  "ip": "116.90.104.0",
+  "city": "Ahmadpur East",
+  "region": "Punjab",
+  "country": "PK",
+  "loc": "29.1427,71.2577",
+  "org": "AS141342 FIBERISH (PVT) LTD",
+  "postal": "63400",
+  "timezone": "Asia/Karachi",
+  "readme": "https://ipinfo.io/missingauth"
+}
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 216.150.1.1 
+Checking headers via 216.150.1.1
+* Connecting to hostname: 216.150.1.1
+*   Trying 216.150.1.1:443...
+* Connected to 216.150.1.1 (216.150.1.1) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+} [322 bytes data]
+* (304) (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* (304) (IN), TLS handshake, Unknown (8):
+{ [15 bytes data]
+* (304) (IN), TLS handshake, Certificate (11):
+{ [2589 bytes data]
+* (304) (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* (304) (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* (304) (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=105thdelivery.com
+*  start date: Nov  8 01:47:07 2025 GMT
+*  expire date: Feb  6 01:47:06 2026 GMT
+*  issuer: C=US; O=Let's Encrypt; CN=R13
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://105thdelivery.com/
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: 105thdelivery.com]
+* [HTTP/2] [1] [:path: /]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET / HTTP/2
+> Host: 105thdelivery.com
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/2 200 
+< age: 470267
+< cache-control: public, max-age=0, must-revalidate
+< content-type: text/html; charset=utf-8
+< date: Thu, 13 Nov 2025 01:19:36 GMT
+< etag: "rl9dcxtrvc7t7"
+< server: Vercel
+< strict-transport-security: max-age=63072000
+< x-matched-path: /
+< x-nextjs-prerender: 1
+< x-nextjs-stale-time: 4294967294
+< x-powered-by: Next.js
+< x-vercel-cache: HIT
+< x-vercel-id: dxb1::iad1::42fj4-1763467043563-1d07c8d70b8a
+< content-length: 10123
+< 
+{ [3460 bytes data]
+* Connection #0 to host 216.150.1.1 left intact
+
+Checking ping to 216.150.1.1
+PING 216.150.1.1 (216.150.1.1): 56 data bytes
+64 bytes from 216.150.1.1: icmp_seq=0 ttl=241 time=28.933 ms
+64 bytes from 216.150.1.1: icmp_seq=1 ttl=241 time=29.195 ms
+64 bytes from 216.150.1.1: icmp_seq=2 ttl=241 time=29.208 ms
+64 bytes from 216.150.1.1: icmp_seq=3 ttl=241 time=29.217 ms
+
+--- 216.150.1.1 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 28.933/29.138/29.217/0.119 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 216.150.1.65 
+Checking headers via 216.150.1.65
+* Connecting to hostname: 216.150.1.65
+*   Trying 216.150.1.65:443...
+* Connected to 216.150.1.65 (216.150.1.65) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+} [322 bytes data]
+* (304) (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* (304) (IN), TLS handshake, Unknown (8):
+{ [15 bytes data]
+* (304) (IN), TLS handshake, Certificate (11):
+{ [2589 bytes data]
+* (304) (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* (304) (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* (304) (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=105thdelivery.com
+*  start date: Nov  8 01:47:07 2025 GMT
+*  expire date: Feb  6 01:47:06 2026 GMT
+*  issuer: C=US; O=Let's Encrypt; CN=R13
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://105thdelivery.com/
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: 105thdelivery.com]
+* [HTTP/2] [1] [:path: /]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET / HTTP/2
+> Host: 105thdelivery.com
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/2 200 
+< age: 470270
+< cache-control: public, max-age=0, must-revalidate
+< content-type: text/html; charset=utf-8
+< date: Thu, 13 Nov 2025 01:19:36 GMT
+< etag: "rl9dcxtrvc7t7"
+< server: Vercel
+< strict-transport-security: max-age=63072000
+< x-matched-path: /
+< x-nextjs-prerender: 1
+< x-nextjs-stale-time: 4294967294
+< x-powered-by: Next.js
+< x-vercel-cache: HIT
+< x-vercel-id: dxb1::iad1::nstlx-1763467046820-2d8abda6d51c
+< content-length: 10123
+< 
+{ [3460 bytes data]
+* Connection #0 to host 216.150.1.65 left intact
+
+Checking ping to 216.150.1.65
+PING 216.150.1.65 (216.150.1.65): 56 data bytes
+64 bytes from 216.150.1.65: icmp_seq=0 ttl=241 time=31.492 ms
+64 bytes from 216.150.1.65: icmp_seq=1 ttl=241 time=31.657 ms
+64 bytes from 216.150.1.65: icmp_seq=2 ttl=241 time=31.992 ms
+64 bytes from 216.150.1.65: icmp_seq=3 ttl=241 time=31.609 ms
+
+--- 216.150.1.65 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 31.492/31.688/31.992/0.186 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 216.150.1.129 
+Checking headers via 216.150.1.129
+* Connecting to hostname: 216.150.1.129
+*   Trying 216.150.1.129:443...
+* Connected to 216.150.1.129 (216.150.1.129) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+} [322 bytes data]
+* (304) (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* (304) (IN), TLS handshake, Unknown (8):
+{ [15 bytes data]
+* (304) (IN), TLS handshake, Certificate (11):
+{ [2589 bytes data]
+* (304) (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* (304) (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* (304) (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=105thdelivery.com
+*  start date: Nov  8 01:47:07 2025 GMT
+*  expire date: Feb  6 01:47:06 2026 GMT
+*  issuer: C=US; O=Let's Encrypt; CN=R13
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://105thdelivery.com/
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: 105thdelivery.com]
+* [HTTP/2] [1] [:path: /]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET / HTTP/2
+> Host: 105thdelivery.com
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/2 200 
+< age: 470273
+< cache-control: public, max-age=0, must-revalidate
+< content-type: text/html; charset=utf-8
+< date: Thu, 13 Nov 2025 01:19:36 GMT
+< etag: "rl9dcxtrvc7t7"
+< server: Vercel
+< strict-transport-security: max-age=63072000
+< x-matched-path: /
+< x-nextjs-prerender: 1
+< x-nextjs-stale-time: 4294967294
+< x-powered-by: Next.js
+< x-vercel-cache: HIT
+< x-vercel-id: dxb1::iad1::dcl29-1763467050049-a05ef25f480a
+< content-length: 10123
+< 
+{ [3460 bytes data]
+* Connection #0 to host 216.150.1.129 left intact
+
+Checking ping to 216.150.1.129
+PING 216.150.1.129 (216.150.1.129): 56 data bytes
+64 bytes from 216.150.1.129: icmp_seq=0 ttl=241 time=31.668 ms
+64 bytes from 216.150.1.129: icmp_seq=1 ttl=241 time=31.715 ms
+64 bytes from 216.150.1.129: icmp_seq=2 ttl=241 time=32.316 ms
+64 bytes from 216.150.1.129: icmp_seq=3 ttl=241 time=31.714 ms
+
+--- 216.150.1.129 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 31.668/31.853/32.316/0.268 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 216.150.1.193 
+Checking headers via 216.150.1.193
+* Connecting to hostname: 216.150.1.193
+*   Trying 216.150.1.193:443...
+* Connected to 216.150.1.193 (216.150.1.193) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+} [322 bytes data]
+* (304) (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* (304) (IN), TLS handshake, Unknown (8):
+{ [15 bytes data]
+* (304) (IN), TLS handshake, Certificate (11):
+{ [2589 bytes data]
+* (304) (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* (304) (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* (304) (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=105thdelivery.com
+*  start date: Nov  8 01:47:07 2025 GMT
+*  expire date: Feb  6 01:47:06 2026 GMT
+*  issuer: C=US; O=Let's Encrypt; CN=R13
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://105thdelivery.com/
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: 105thdelivery.com]
+* [HTTP/2] [1] [:path: /]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET / HTTP/2
+> Host: 105thdelivery.com
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/2 200 
+< age: 470277
+< cache-control: public, max-age=0, must-revalidate
+< content-type: text/html; charset=utf-8
+< date: Thu, 13 Nov 2025 01:19:36 GMT
+< etag: "rl9dcxtrvc7t7"
+< server: Vercel
+< strict-transport-security: max-age=63072000
+< x-matched-path: /
+< x-nextjs-prerender: 1
+< x-nextjs-stale-time: 4294967294
+< x-powered-by: Next.js
+< x-vercel-cache: HIT
+< x-vercel-id: dxb1::iad1::nrwmm-1763467053285-b22758860cf0
+< content-length: 10123
+< 
+{ [3460 bytes data]
+* Connection #0 to host 216.150.1.193 left intact
+
+Checking ping to 216.150.1.193
+PING 216.150.1.193 (216.150.1.193): 56 data bytes
+64 bytes from 216.150.1.193: icmp_seq=0 ttl=241 time=29.188 ms
+64 bytes from 216.150.1.193: icmp_seq=1 ttl=241 time=29.276 ms
+64 bytes from 216.150.1.193: icmp_seq=2 ttl=241 time=29.133 ms
+64 bytes from 216.150.1.193: icmp_seq=3 ttl=241 time=29.278 ms
+
+--- 216.150.1.193 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 29.133/29.219/29.278/0.061 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 216.150.16.1 
+Checking headers via 216.150.16.1
+* Connecting to hostname: 216.150.16.1
+*   Trying 216.150.16.1:443...
+* Connected to 216.150.16.1 (216.150.16.1) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+} [322 bytes data]
+* (304) (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* (304) (IN), TLS handshake, Unknown (8):
+{ [15 bytes data]
+* (304) (IN), TLS handshake, Certificate (11):
+{ [2589 bytes data]
+* (304) (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* (304) (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* (304) (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=105thdelivery.com
+*  start date: Nov  8 01:47:07 2025 GMT
+*  expire date: Feb  6 01:47:06 2026 GMT
+*  issuer: C=US; O=Let's Encrypt; CN=R13
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://105thdelivery.com/
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: 105thdelivery.com]
+* [HTTP/2] [1] [:path: /]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET / HTTP/2
+> Host: 105thdelivery.com
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/2 200 
+< age: 470280
+< cache-control: public, max-age=0, must-revalidate
+< content-type: text/html; charset=utf-8
+< date: Thu, 13 Nov 2025 01:19:36 GMT
+< etag: "rl9dcxtrvc7t7"
+< server: Vercel
+< strict-transport-security: max-age=63072000
+< x-matched-path: /
+< x-nextjs-prerender: 1
+< x-nextjs-stale-time: 4294967294
+< x-powered-by: Next.js
+< x-vercel-cache: HIT
+< x-vercel-id: dxb1::iad1::2t5lk-1763467056525-ba6cf48b25cd
+< content-length: 10123
+< 
+{ [3460 bytes data]
+* Connection #0 to host 216.150.16.1 left intact
+
+Checking ping to 216.150.16.1
+PING 216.150.16.1 (216.150.16.1): 56 data bytes
+64 bytes from 216.150.16.1: icmp_seq=0 ttl=241 time=28.989 ms
+64 bytes from 216.150.16.1: icmp_seq=1 ttl=241 time=29.436 ms
+64 bytes from 216.150.16.1: icmp_seq=2 ttl=241 time=29.122 ms
+64 bytes from 216.150.16.1: icmp_seq=3 ttl=241 time=29.316 ms
+
+--- 216.150.16.1 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 28.989/29.216/29.436/0.172 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 216.150.16.65 
+Checking headers via 216.150.16.65
+* Connecting to hostname: 216.150.16.65
+*   Trying 216.150.16.65:443...
+* Connected to 216.150.16.65 (216.150.16.65) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+} [322 bytes data]
+* (304) (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* (304) (IN), TLS handshake, Unknown (8):
+{ [15 bytes data]
+* (304) (IN), TLS handshake, Certificate (11):
+{ [2589 bytes data]
+* (304) (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* (304) (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* (304) (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=105thdelivery.com
+*  start date: Nov  8 01:47:07 2025 GMT
+*  expire date: Feb  6 01:47:06 2026 GMT
+*  issuer: C=US; O=Let's Encrypt; CN=R13
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://105thdelivery.com/
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: 105thdelivery.com]
+* [HTTP/2] [1] [:path: /]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET / HTTP/2
+> Host: 105thdelivery.com
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/2 200 
+< age: 470283
+< cache-control: public, max-age=0, must-revalidate
+< content-type: text/html; charset=utf-8
+< date: Thu, 13 Nov 2025 01:19:36 GMT
+< etag: "rl9dcxtrvc7t7"
+< server: Vercel
+< strict-transport-security: max-age=63072000
+< x-matched-path: /
+< x-nextjs-prerender: 1
+< x-nextjs-stale-time: 4294967294
+< x-powered-by: Next.js
+< x-vercel-cache: HIT
+< x-vercel-id: dxb1::iad1::j5qnc-1763467059792-1723599f1fdd
+< content-length: 10123
+< 
+{ [3460 bytes data]
+* Connection #0 to host 216.150.16.65 left intact
+
+Checking ping to 216.150.16.65
+PING 216.150.16.65 (216.150.16.65): 56 data bytes
+64 bytes from 216.150.16.65: icmp_seq=0 ttl=241 time=28.831 ms
+64 bytes from 216.150.16.65: icmp_seq=1 ttl=241 time=28.999 ms
+64 bytes from 216.150.16.65: icmp_seq=2 ttl=241 time=28.813 ms
+64 bytes from 216.150.16.65: icmp_seq=3 ttl=241 time=29.169 ms
+
+--- 216.150.16.65 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 28.813/28.953/29.169/0.144 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 216.150.16.129 
+Checking headers via 216.150.16.129
+* Connecting to hostname: 216.150.16.129
+*   Trying 216.150.16.129:443...
+* Connected to 216.150.16.129 (216.150.16.129) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+} [322 bytes data]
+* (304) (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* (304) (IN), TLS handshake, Unknown (8):
+{ [15 bytes data]
+* (304) (IN), TLS handshake, Certificate (11):
+{ [2589 bytes data]
+* (304) (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* (304) (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* (304) (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=105thdelivery.com
+*  start date: Nov  8 01:47:07 2025 GMT
+*  expire date: Feb  6 01:47:06 2026 GMT
+*  issuer: C=US; O=Let's Encrypt; CN=R13
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://105thdelivery.com/
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: 105thdelivery.com]
+* [HTTP/2] [1] [:path: /]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET / HTTP/2
+> Host: 105thdelivery.com
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/2 200 
+< age: 470286
+< cache-control: public, max-age=0, must-revalidate
+< content-type: text/html; charset=utf-8
+< date: Thu, 13 Nov 2025 01:19:36 GMT
+< etag: "rl9dcxtrvc7t7"
+< server: Vercel
+< strict-transport-security: max-age=63072000
+< x-matched-path: /
+< x-nextjs-prerender: 1
+< x-nextjs-stale-time: 4294967294
+< x-powered-by: Next.js
+< x-vercel-cache: HIT
+< x-vercel-id: dxb1::iad1::lspg9-1763467063005-97e4082a6844
+< content-length: 10123
+< 
+{ [3460 bytes data]
+* Connection #0 to host 216.150.16.129 left intact
+
+Checking ping to 216.150.16.129
+PING 216.150.16.129 (216.150.16.129): 56 data bytes
+64 bytes from 216.150.16.129: icmp_seq=0 ttl=241 time=29.109 ms
+64 bytes from 216.150.16.129: icmp_seq=1 ttl=241 time=29.347 ms
+64 bytes from 216.150.16.129: icmp_seq=2 ttl=241 time=28.679 ms
+64 bytes from 216.150.16.129: icmp_seq=3 ttl=241 time=29.044 ms
+
+--- 216.150.16.129 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 28.679/29.045/29.347/0.239 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Testing 216.150.16.193 
+Checking headers via 216.150.16.193
+* Connecting to hostname: 216.150.16.193
+*   Trying 216.150.16.193:443...
+* Connected to 216.150.16.193 (216.150.16.193) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+} [322 bytes data]
+* (304) (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* (304) (IN), TLS handshake, Unknown (8):
+{ [15 bytes data]
+* (304) (IN), TLS handshake, Certificate (11):
+{ [2589 bytes data]
+* (304) (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* (304) (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* (304) (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=105thdelivery.com
+*  start date: Nov  8 01:47:07 2025 GMT
+*  expire date: Feb  6 01:47:06 2026 GMT
+*  issuer: C=US; O=Let's Encrypt; CN=R13
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://105thdelivery.com/
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: 105thdelivery.com]
+* [HTTP/2] [1] [:path: /]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET / HTTP/2
+> Host: 105thdelivery.com
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/2 200 
+< age: 470290
+< cache-control: public, max-age=0, must-revalidate
+< content-type: text/html; charset=utf-8
+< date: Thu, 13 Nov 2025 01:19:36 GMT
+< etag: "rl9dcxtrvc7t7"
+< server: Vercel
+< strict-transport-security: max-age=63072000
+< x-matched-path: /
+< x-nextjs-prerender: 1
+< x-nextjs-stale-time: 4294967294
+< x-powered-by: Next.js
+< x-vercel-cache: HIT
+< x-vercel-id: dxb1::iad1::rznhn-1763467066241-30fbfbe44a45
+< content-length: 10123
+< 
+{ [3460 bytes data]
+* Connection #0 to host 216.150.16.193 left intact
+
+Checking ping to 216.150.16.193
+PING 216.150.16.193 (216.150.16.193): 56 data bytes
+64 bytes from 216.150.16.193: icmp_seq=0 ttl=241 time=29.180 ms
+64 bytes from 216.150.16.193: icmp_seq=1 ttl=241 time=29.217 ms
+64 bytes from 216.150.16.193: icmp_seq=2 ttl=241 time=28.846 ms
+64 bytes from 216.150.16.193: icmp_seq=3 ttl=241 time=28.977 ms
+
+--- 216.150.16.193 ping statistics ---
+4 packets transmitted, 4 packets received, 0.0% packet loss
+round-trip min/avg/max/stddev = 28.846/29.055/29.217/0.151 ms
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── dig 105thdelivery.com 
+
+
+; <<>> DiG 9.10.6 <<>> 105thdelivery.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 1432
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 13, ADDITIONAL: 14
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;105thdelivery.com.		IN	A
+
+;; ANSWER SECTION:
+105thdelivery.com.	300	IN	A	216.150.1.1
+
+;; AUTHORITY SECTION:
+com.			46	IN	NS	a.gtld-servers.net.
+com.			46	IN	NS	j.gtld-servers.net.
+com.			46	IN	NS	c.gtld-servers.net.
+com.			46	IN	NS	e.gtld-servers.net.
+com.			46	IN	NS	k.gtld-servers.net.
+com.			46	IN	NS	m.gtld-servers.net.
+com.			46	IN	NS	g.gtld-servers.net.
+com.			46	IN	NS	f.gtld-servers.net.
+com.			46	IN	NS	b.gtld-servers.net.
+com.			46	IN	NS	l.gtld-servers.net.
+com.			46	IN	NS	i.gtld-servers.net.
+com.			46	IN	NS	d.gtld-servers.net.
+com.			46	IN	NS	h.gtld-servers.net.
+
+;; ADDITIONAL SECTION:
+a.gtld-servers.net.	117	IN	A	192.5.6.30
+b.gtld-servers.net.	117	IN	A	192.33.14.30
+c.gtld-servers.net.	117	IN	A	192.26.92.30
+d.gtld-servers.net.	117	IN	A	192.31.80.30
+e.gtld-servers.net.	117	IN	A	192.12.94.30
+f.gtld-servers.net.	117	IN	A	192.35.51.30
+g.gtld-servers.net.	117	IN	A	192.42.93.30
+h.gtld-servers.net.	117	IN	A	192.54.112.30
+i.gtld-servers.net.	117	IN	A	192.43.172.30
+j.gtld-servers.net.	117	IN	A	192.48.79.30
+k.gtld-servers.net.	117	IN	A	192.52.178.30
+l.gtld-servers.net.	117	IN	A	192.41.162.30
+m.gtld-servers.net.	117	IN	A	192.55.83.30
+
+;; Query time: 282 msec
+;; SERVER: 192.168.100.1#53(192.168.100.1)
+;; WHEN: Tue Nov 18 16:57:49 PKT 2025
+;; MSG SIZE  rcvd: 494
+
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── dig 105thdelivery.com via 8.8.8.8
+
+
+; <<>> DiG 9.10.6 <<>> 105thdelivery.com @8.8.8.8
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 62894
+;; flags: qr rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 13, ADDITIONAL: 14
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+;; QUESTION SECTION:
+;105thdelivery.com.		IN	A
+
+;; ANSWER SECTION:
+105thdelivery.com.	300	IN	A	216.150.1.1
+
+;; AUTHORITY SECTION:
+com.			46	IN	NS	j.gtld-servers.net.
+com.			46	IN	NS	k.gtld-servers.net.
+com.			46	IN	NS	h.gtld-servers.net.
+com.			46	IN	NS	c.gtld-servers.net.
+com.			46	IN	NS	l.gtld-servers.net.
+com.			46	IN	NS	f.gtld-servers.net.
+com.			46	IN	NS	a.gtld-servers.net.
+com.			46	IN	NS	e.gtld-servers.net.
+com.			46	IN	NS	m.gtld-servers.net.
+com.			46	IN	NS	d.gtld-servers.net.
+com.			46	IN	NS	g.gtld-servers.net.
+com.			46	IN	NS	b.gtld-servers.net.
+com.			46	IN	NS	i.gtld-servers.net.
+
+;; ADDITIONAL SECTION:
+a.gtld-servers.net.	117	IN	A	192.5.6.30
+b.gtld-servers.net.	117	IN	A	192.33.14.30
+c.gtld-servers.net.	117	IN	A	192.26.92.30
+d.gtld-servers.net.	117	IN	A	192.31.80.30
+e.gtld-servers.net.	117	IN	A	192.12.94.30
+f.gtld-servers.net.	117	IN	A	192.35.51.30
+g.gtld-servers.net.	117	IN	A	192.42.93.30
+h.gtld-servers.net.	117	IN	A	192.54.112.30
+i.gtld-servers.net.	117	IN	A	192.43.172.30
+j.gtld-servers.net.	117	IN	A	192.48.79.30
+k.gtld-servers.net.	117	IN	A	192.52.178.30
+l.gtld-servers.net.	117	IN	A	192.41.162.30
+m.gtld-servers.net.	117	IN	A	192.55.83.30
+
+;; Query time: 15 msec
+;; SERVER: 8.8.8.8#53(8.8.8.8)
+;; WHEN: Tue Nov 18 16:57:49 PKT 2025
+;; MSG SIZE  rcvd: 494
+
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── dig 105thdelivery.com via trace
+
+
+; <<>> DiG 9.10.6 <<>> 105thdelivery.com +trace
+;; global options: +cmd
+.			103	IN	NS	b.root-servers.net.
+.			103	IN	NS	k.root-servers.net.
+.			103	IN	NS	i.root-servers.net.
+.			103	IN	NS	h.root-servers.net.
+.			103	IN	NS	c.root-servers.net.
+.			103	IN	NS	e.root-servers.net.
+.			103	IN	NS	d.root-servers.net.
+.			103	IN	NS	l.root-servers.net.
+.			103	IN	NS	j.root-servers.net.
+.			103	IN	NS	g.root-servers.net.
+.			103	IN	NS	m.root-servers.net.
+.			103	IN	NS	a.root-servers.net.
+.			103	IN	NS	f.root-servers.net.
+.			236	IN	RRSIG	NS 8 0 518400 20251201050000 20251118040000 61809 . QTAU7lTykJteXtfb6Rx+w+d75i/6kmEBZYkKTevktqZbb+V4gRGnWnpm Q4WYXKIlmNV6ho/m7xI1BQMJ5DKN0JAoSowB4Nfeid3uU+taecXR+Eq1 86FCo4C8dp3u5PB2OV7PuvBLzHODUpfO1iWjdyX5vn1WJYpSWMMnRAhn EPWzS4NMq5rCHMa89wUjicNSpICVTpuOti6o9Dk3ur1rOnTRxeKS2bPA Li9e0Vskw5leSBp9myYlEliwoa1ZinwSPj+J/5ORACb/RIOvByWIUlK4 lp9YRVOgmx8yLh+ue5j+/aLcsL0zvmq3vggcO8zpW2BEys7pwk3FNfFJ VfgmeQ==
+;; Received 733 bytes from 192.168.100.1#53(192.168.100.1) in 16 ms
+
+105thdelivery.com.	299	IN	A	216.150.1.1
+com.			45	IN	NS	a.gtld-servers.net.
+com.			45	IN	NS	b.gtld-servers.net.
+com.			45	IN	NS	m.gtld-servers.net.
+com.			45	IN	NS	e.gtld-servers.net.
+com.			45	IN	NS	f.gtld-servers.net.
+com.			45	IN	NS	l.gtld-servers.net.
+com.			45	IN	NS	d.gtld-servers.net.
+com.			45	IN	NS	k.gtld-servers.net.
+com.			45	IN	NS	j.gtld-servers.net.
+com.			45	IN	NS	g.gtld-servers.net.
+com.			45	IN	NS	c.gtld-servers.net.
+com.			45	IN	NS	i.gtld-servers.net.
+com.			45	IN	NS	h.gtld-servers.net.
+com.			45	IN	RRSIG	NS 13 1 172800 20251124002637 20251116231637 46539 com. 2EhfACg6vjX9aNngtekvqbDXiMcZCpapbLc4t/i/EFCKGdOhStOjAhXU 1sfkY8Z3dID+TKwsND9qIOeKkZngdw==
+;; Received 593 bytes from 192.36.148.17#53(i.root-servers.net) in 16 ms
+
+└───────────────────────────────────────
+
+┌───────────────────────────────────────
+├─────── Output of 105thdelivery.com
+
+* Host 105thdelivery.com:443 was resolved.
+* IPv6: (none)
+* IPv4: 216.150.1.1
+*   Trying 216.150.1.1:443...
+* Connected to 105thdelivery.com (216.150.1.1) port 443
+* ALPN: curl offers h2,http/1.1
+* (304) (OUT), TLS handshake, Client hello (1):
+} [322 bytes data]
+* (304) (IN), TLS handshake, Server hello (2):
+{ [122 bytes data]
+* (304) (IN), TLS handshake, Unknown (8):
+{ [15 bytes data]
+* (304) (IN), TLS handshake, Certificate (11):
+{ [2589 bytes data]
+* (304) (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* (304) (IN), TLS handshake, Finished (20):
+{ [36 bytes data]
+* (304) (OUT), TLS handshake, Finished (20):
+} [36 bytes data]
+* SSL connection using TLSv1.3 / AEAD-CHACHA20-POLY1305-SHA256 / [blank] / UNDEF
+* ALPN: server accepted h2
+* Server certificate:
+*  subject: CN=105thdelivery.com
+*  start date: Nov  8 01:47:07 2025 GMT
+*  expire date: Feb  6 01:47:06 2026 GMT
+*  issuer: C=US; O=Let's Encrypt; CN=R13
+*  SSL certificate verify ok.
+* using HTTP/2
+* [HTTP/2] [1] OPENED stream for https://105thdelivery.com/
+* [HTTP/2] [1] [:method: GET]
+* [HTTP/2] [1] [:scheme: https]
+* [HTTP/2] [1] [:authority: 105thdelivery.com]
+* [HTTP/2] [1] [:path: /]
+* [HTTP/2] [1] [user-agent: curl/8.7.1]
+* [HTTP/2] [1] [accept: */*]
+> GET / HTTP/2
+> Host: 105thdelivery.com
+> User-Agent: curl/8.7.1
+> Accept: */*
+> 
+* Request completely sent off
+< HTTP/2 200 
+< age: 470293
+< cache-control: public, max-age=0, must-revalidate
+< content-type: text/html; charset=utf-8
+< date: Thu, 13 Nov 2025 01:19:36 GMT
+< etag: "rl9dcxtrvc7t7"
+< server: Vercel
+< strict-transport-security: max-age=63072000
+< x-matched-path: /
+< x-nextjs-prerender: 1
+< x-nextjs-stale-time: 4294967294
+< x-powered-by: Next.js
+< x-vercel-cache: HIT
+< x-vercel-id: dxb1::iad1::55hvw-1763467070183-563d97eb515a
+< content-length: 10123
+< 
+{ [3460 bytes data]
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="/_next/static/css/f681123763c1d2ce.css" data-precedence="next"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-786bc8dd37364a66.js"/><script src="/_next/static/chunks/4bd1b696-3d64c145d25aeb52.js" async=""></script><script src="/_next/static/chunks/1684-05bbe3eedc584f16.js" async=""></script><script src="/_next/static/chunks/main-app-6cb4d4205dbe6682.js" async=""></script><script src="/_next/static/chunks/5003-f1c951693ce1da97.js" async=""></script><script src="/_next/static/chunks/2108-3992d1cc92ce603b.js" async=""></script><script src="/_next/static/chunks/8178-a47a2954eb4c97bf.js" async=""></script><script src="/_next/static/chunks/7836-75aeaff3c500dc71.js" async=""></script><script src="/_next/static/chunks/3644-a57146ead4c1cb4a.js" async=""></script><script src="/_next/static/chunks/2061-24126e6fd94a51c6.js" async=""></script><script src="/_next/static/chunks/app/layout-5bf06abf3a4d8293.js" async=""></script><script src="/_next/static/chunks/4379-a5fda2cadc1e869a.js" async=""></script><script src="/_next/static/chunks/9822-6fafbb63e348d830.js" async=""></script><script src="/_next/static/chunks/5125-163f712a8345f55c.js" async=""></script><script src="/_next/static/chunks/966-31f570bc46fe4edf.js" async=""></script><script src="/_next/static/chunks/app/page-68ec7488ccfe36ce.js" async=""></script><title>Store name</title><meta name="description" content="Store description"/><link rel="icon" href="/favicon.ico" type="image/x-icon" sizes="16x16"/><script src="/_next/static/chunks/polyfills-42372ed130431b0a.js" noModule=""></script></head><body><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events:none"><ol tabindex="-1" class="fixed top-0 z-[100] flex max-h-screen w-full flex-col-reverse p-4 sm:bottom-0 sm:right-0 sm:top-auto sm:flex-col md:max-w-[420px]"></ol></div><section aria-label="Notifications alt+T" tabindex="-1" aria-live="polite" aria-relevant="additions text" aria-atomic="false"></section><div class="min-h-screen bg-background flex items-center justify-center"><div class="text-center space-y-4"><div class="w-8 h-8 border-2 border-primary border-t-transparent rounded-full animate-spin mx-auto"></div><p class="text-muted-foreground">Loading...</p></div></div><script src="/_next/static/chunks/webpack-786bc8dd37364a66.js" async=""></script><script>(self.__next_f=self.__next_f||[]).push([0])</script><script>self.__next_f.push([1,"1:\"$Sreact.fragment\"\n2:I[848,[\"5003\",\"static/chunks/5003-f1c951693ce1da97.js\",\"2108\",\"static/chunks/2108-3992d1cc92ce603b.js\",\"8178\",\"static/chunks/8178-a47a2954eb4c97bf.js\",\"7836\",\"static/chunks/7836-75aeaff3c500dc71.js\",\"3644\",\"static/chunks/3644-a57146ead4c1cb4a.js\",\"2061\",\"static/chunks/2061-24126e6fd94a51c6.js\",\"7177\",\"static/chunks/app/layout-5bf06abf3a4d8293.js\"],\"SessionProvider\"]\n3:I[9015,[\"5003\",\"static/chunks/5003-f1c951693ce1da97.js\",\"2108\",\"static/chunks/2108-3992d1cc92ce603b.js\",\"8178\",\"static/chunks/8178-a47a2954eb4c97bf.js\",\"7836\",\"static/chunks/7836-75aeaff3c500dc71.js\",\"3644\",\"static/chunks/3644-a57146ead4c1cb4a.js\",\"2061\",\"static/chunks/2061-24126e6fd94a51c6.js\",\"7177\",\"static/chunks/app/layout-5bf06abf3a4d8293.js\"],\"ThemeProvider\"]\n4:I[6102,[\"5003\",\"static/chunks/5003-f1c951693ce1da97.js\",\"2108\",\"static/chunks/2108-3992d1cc92ce603b.js\",\"8178\",\"static/chunks/8178-a47a2954eb4c97bf.js\",\"7836\",\"static/chunks/7836-75aeaff3c500dc71.js\",\"3644\",\"static/chunks/3644-a57146ead4c1cb4a.js\",\"2061\",\"static/chunks/2061-24126e6fd94a51c6.js\",\"7177\",\"static/chunks/app/layout-5bf06abf3a4d8293.js\"],\"TooltipProvider\"]\n5:I[5323,[\"5003\",\"static/chunks/5003-f1c951693ce1da97.js\",\"2108\",\"static/chunks/2108-3992d1cc92ce603b.js\",\"8178\",\"static/chunks/8178-a47a2954eb4c97bf.js\",\"7836\",\"static/chunks/7836-75aeaff3c500dc71.js\",\"3644\",\"static/chunks/3644-a57146ead4c1cb4a.js\",\"2061\",\"static/chunks/2061-24126e6fd94a51c6.js\",\"7177\",\"static/chunks/app/layout-5bf06abf3a4d8293.js\"],\"CartProvider\"]\n6:I[3319,[\"5003\",\"static/chunks/5003-f1c951693ce1da97.js\",\"2108\",\"static/chunks/2108-3992d1cc92ce603b.js\",\"8178\",\"static/chunks/8178-a47a2954eb4c97bf.js\",\"7836\",\"static/chunks/7836-75aeaff3c500dc71.js\",\"3644\",\"static/chunks/3644-a57146ead4c1cb4a.js\",\"2061\",\"static/chunks/2061-24126e6fd94a51c6.js\",\"7177\",\"static/chunks/app/layout-5bf06abf3a4d8293.js\"],\"ChatProvider\"]\n7:I[7361,[\"5003\",\"static/chunks/5003-f1c951693ce1da97.js\",\"2108\",\"static/chunks/2108-3992d1cc92ce603b.js\",\"8178\",\"static/chunks/8178-a47a2954eb4c97bf.js\",\"7836\",\"static/chunks/"])</script><script>self.__next_f.push([1,"7836-75aeaff3c500dc71.js\",\"3644\",\"static/chunks/3644-a57146ead4c1cb4a.js\",\"2061\",\"static/chunks/2061-24126e6fd94a51c6.js\",\"7177\",\"static/chunks/app/layout-5bf06abf3a4d8293.js\"],\"default\"]\n8:I[2558,[\"5003\",\"static/chunks/5003-f1c951693ce1da97.js\",\"2108\",\"static/chunks/2108-3992d1cc92ce603b.js\",\"8178\",\"static/chunks/8178-a47a2954eb4c97bf.js\",\"7836\",\"static/chunks/7836-75aeaff3c500dc71.js\",\"3644\",\"static/chunks/3644-a57146ead4c1cb4a.js\",\"2061\",\"static/chunks/2061-24126e6fd94a51c6.js\",\"7177\",\"static/chunks/app/layout-5bf06abf3a4d8293.js\"],\"Toaster\"]\n9:I[9074,[\"5003\",\"static/chunks/5003-f1c951693ce1da97.js\",\"2108\",\"static/chunks/2108-3992d1cc92ce603b.js\",\"8178\",\"static/chunks/8178-a47a2954eb4c97bf.js\",\"7836\",\"static/chunks/7836-75aeaff3c500dc71.js\",\"3644\",\"static/chunks/3644-a57146ead4c1cb4a.js\",\"2061\",\"static/chunks/2061-24126e6fd94a51c6.js\",\"7177\",\"static/chunks/app/layout-5bf06abf3a4d8293.js\"],\"Toaster\"]\na:I[7555,[],\"\"]\nb:I[1295,[],\"\"]\nc:I[894,[],\"ClientPageRoot\"]\nd:I[654,[\"5003\",\"static/chunks/5003-f1c951693ce1da97.js\",\"4379\",\"static/chunks/4379-a5fda2cadc1e869a.js\",\"9822\",\"static/chunks/9822-6fafbb63e348d830.js\",\"2108\",\"static/chunks/2108-3992d1cc92ce603b.js\",\"8178\",\"static/chunks/8178-a47a2954eb4c97bf.js\",\"7836\",\"static/chunks/7836-75aeaff3c500dc71.js\",\"5125\",\"static/chunks/5125-163f712a8345f55c.js\",\"966\",\"static/chunks/966-31f570bc46fe4edf.js\",\"8974\",\"static/chunks/app/page-68ec7488ccfe36ce.js\"],\"default\"]\n10:I[9665,[],\"OutletBoundary\"]\n13:I[9665,[],\"ViewportBoundary\"]\n15:I[9665,[],\"MetadataBoundary\"]\n17:I[6614,[],\"\"]\n:HL[\"/_next/static/css/f681123763c1d2ce.css\",\"style\"]\n"])</script><script>self.__next_f.push([1,"0:{\"P\":null,\"b\":\"2Z0h_Z7uhBjAlDUpJYRRz\",\"p\":\"\",\"c\":[\"\",\"\"],\"i\":false,\"f\":[[[\"\",{\"children\":[\"__PAGE__\",{}]},\"$undefined\",\"$undefined\",true],[\"\",[\"$\",\"$1\",\"c\",{\"children\":[[[\"$\",\"link\",\"0\",{\"rel\":\"stylesheet\",\"href\":\"/_next/static/css/f681123763c1d2ce.css\",\"precedence\":\"next\",\"crossOrigin\":\"$undefined\",\"nonce\":\"$undefined\"}]],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"children\":[\"$\",\"$L2\",null,{\"children\":[\"$\",\"$L3\",null,{\"children\":[\"$\",\"$L4\",null,{\"children\":[\"$\",\"$L5\",null,{\"children\":[\"$\",\"$L6\",null,{\"children\":[\"$\",\"$L7\",null,{\"children\":[[\"$\",\"$L8\",null,{}],[\"$\",\"$L9\",null,{}],[\"$\",\"$La\",null,{\"parallelRouterKey\":\"children\",\"error\":\"$undefined\",\"errorStyles\":\"$undefined\",\"errorScripts\":\"$undefined\",\"template\":[\"$\",\"$Lb\",null,{}],\"templateStyles\":\"$undefined\",\"templateScripts\":\"$undefined\",\"notFound\":[[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],[]],\"forbidden\":\"$undefined\",\"unauthorized\":\"$undefined\"}]]}]}]}]}]}]}]}]}]]}],{\"children\":[\"__PAGE__\",[\"$\",\"$1\",\"c\",{\"children\":[[\"$\",\"$Lc\",null,{\"Component\":\"$d\",\"searchParams\":{},\"params\":{},\"promises\":[\"$@e\",\"$@f\"]}],\"$undefined\",null,[\"$\",\"$L10\",null,{\"children\":[\"$L11\",\"$L12\",null]}]]}],{},null,false]},null,false],[\"$\",\"$1\",\"h\",{\"children\":[null,[\"$\",\"$1\",\"QJIRPJj8DDAVvrsclsKE9\",{\"children\":[[\"$\",\"$L13\",null,{\"children\":\"$L14\"}],null]}],[\"$\",\"$L15\",null,{\"children\":\"$L16\"}]]}],false]],\"m\":\"$undefined\",\"G\":[\"$17\",\"$undefined\"],\"s\":false,\"S\":true}\n"])</script><script>self.__next_f.push([1,"e:{}\nf:{}\n"])</script><script>self.__next_f.push([1,"14:[[\"$\",\"meta\",\"0\",{\"charSet\":\"utf-8\"}],[\"$\",\"meta\",\"1\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]\n11:null\n"])</script><script>self.__next_f.push([1,"12:null\n16:[[\"$\",\"title\",\"0\",{\"children\":\"Store name\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Store description\"}],[\"$\",\"link\",\"2\",{\"rel\":\"icon\",\"href\":\"/favicon.ico\",\"type\":\"image/x-icon\",\"sizes\":\"16x16\"}]]\n"])</script></body></html>* Connection #0 to host 105thdelivery.com left intact
+
+└───────────────────────────────────────
+
+
+┌───────────────────────────────────────
+│ Time elapsed: 28 seconds
+│
+├─────── FINISHED
+└───────────────────────────────────────
+
+
+
+File can be found at /Users/musaver/Desktop/central-distros-105th/username-password/frontend/vercel-debug.txt
+
