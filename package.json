@@ -11,7 +11,9 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "tsx scripts/migrate.ts",
     "db:studio": "drizzle-kit studio",
-    "db:verify": "tsx scripts/verify-tables.ts"
+    "db:verify": "tsx scripts/verify-tables.ts",
+    "admin:create": "tsx scripts/create-admin.ts",
+    "admin:list": "tsx scripts/check-admin.ts"
   },
   "dependencies": {
     "@auth/drizzle-adapter": "^1.9.1",
