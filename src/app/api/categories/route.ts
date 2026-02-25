@@ -5,7 +5,7 @@ import { eq, and, sql } from 'drizzle-orm';
 
 export async function GET(req: NextRequest) {
   try {
-    // Fetch active categories with product counts
+    // Fetch active categories with product counts (only counting active products)
     const categoriesWithCounts = await db
       .select({
         category: {
@@ -19,7 +19,7 @@ export async function GET(req: NextRequest) {
           isFeatured: categories.isFeatured,
           sortOrder: categories.sortOrder,
         },
-        productCount: sql<number>`COUNT(DISTINCT ${productCategories.productId})`,
+        productCount: sql<number>`COUNT(DISTINCT ${products.id})`,
       })
       .from(categories)
       .leftJoin(
@@ -48,6 +48,16 @@ export async function GET(req: NextRequest) {
       productCount: item.productCount || 0,
     }));
 
+    // Count total distinct active products for the "All" tab
+    const totalActiveProducts = await db
+      .select({
+        count: sql<number>`COUNT(DISTINCT ${products.id})`,
+      })
+      .from(products)
+      .where(eq(products.isActive, true));
+
+    const allProductCount = totalActiveProducts[0]?.count || 0;
+
     // Add "All" category at the beginning
     const allCategories = [
       {
@@ -60,7 +70,7 @@ export async function GET(req: NextRequest) {
         iconName: null,
         isFeatured: false,
         sortOrder: -1,
-        productCount: transformedCategories.reduce((sum, cat) => sum + cat.productCount, 0),
+        productCount: allProductCount,
       },
       ...transformedCategories
     ];
