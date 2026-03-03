@@ -708,7 +708,7 @@ export const settings = mysqlTable("settings", {
 // ✅ Domain Verification (stores domain verification status)
 export const domainVerification = mysqlTable("domain_verification", {
   id: varchar("id", { length: 255 }).primaryKey(),
-  domain: varchar("domain", { length: 255 }).notNull().unique(), // e.g., 'www.105thdelivery.com'
+  domain: varchar("domain", { length: 255 }).notNull().unique(), // e.g., 'www.nychightimes.com'
   lastVerifiedAt: datetime("last_verified_at").notNull(), // Last successful verification timestamp
   verificationStatus: varchar("verification_status", { length: 50 }).default("valid"), // valid, invalid, pending
   clientStatus: varchar("client_status", { length: 50 }), // active, inactive, suspended
