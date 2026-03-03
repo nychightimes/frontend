@@ -9,6 +9,7 @@ import { userLoyaltyPoints, loyaltyPointsHistory, settings, orders, orderItems, 
 import { eq, and, or, isNull } from 'drizzle-orm'
 import { v4 as uuidv4 } from 'uuid'
 import { validateAndCalculateCouponDiscount } from '@/lib/coupons'
+import { sendAdminOrderNotification } from '@/lib/email'
 
 // Get loyalty settings directly from database
 export async function getLoyaltySettings() {
@@ -638,6 +639,23 @@ export async function processCheckout(formData: FormData) {
           // Continue with order creation even if inventory update fails
         }
       }
+    }
+
+    // Notify admin of order creation (do not block checkout if email fails)
+    try {
+      await sendAdminOrderNotification({
+        orderNumber,
+        orderType: checkoutData.orderType,
+        total: finalTotal,
+        itemCount: Array.isArray(checkoutData.items) ? checkoutData.items.length : 0,
+        userId: session.user.id,
+        customerName: checkoutData.customerInfo?.name || null,
+        customerEmail: checkoutData.customerInfo?.email || null,
+        customerPhone: checkoutData.customerInfo?.phone || null,
+        createdAt: new Date(),
+      });
+    } catch (error) {
+      console.error('Error sending admin order notification:', error);
     }
 
     // Award loyalty points for the order

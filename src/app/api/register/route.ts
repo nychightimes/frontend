@@ -6,7 +6,7 @@ import { eq, or } from 'drizzle-orm';
 import bcrypt from 'bcrypt';
 import { globalMagicLink, magicLinkUsage } from '@/lib/schema';
 import { v4 as uuidv4 } from 'uuid';
-import { sendWelcomeEmail } from '@/lib/email';
+import { sendAdminRegistrationNotification, sendWelcomeEmail } from '@/lib/email';
 
 export async function POST(req: Request) {
   const { email, password, name, note, magicToken } = await req.json();
@@ -82,6 +82,20 @@ export async function POST(req: Request) {
   }
 
   await db.insert(user).values(userData);
+
+  // Notify admin of registration (do not block registration if email fails)
+  try {
+    await sendAdminRegistrationNotification({
+      userId: userData.id,
+      status: userData.status,
+      name: name || null,
+      identifier: email,
+      identifierType: isEmail ? 'email' : 'phone',
+      createdAt: new Date(),
+    });
+  } catch (error) {
+    console.error('Error sending admin registration notification:', error);
+  }
 
   // Track magic link usage if it was used
   if (isMagicLinkValid && magicLinkData) {

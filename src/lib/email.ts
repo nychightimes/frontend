@@ -45,3 +45,77 @@ export async function sendWelcomeEmail(to: string, name?: string) {
 
   return await res.json();
 }
+
+const DEFAULT_ADMIN_NOTIFICATION_EMAIL = 'nychightimes@yahoo.com';
+
+export function getAdminNotificationEmail() {
+  const configured = process.env.ADMIN_NOTIFICATION_EMAIL?.trim();
+  return configured ? configured : DEFAULT_ADMIN_NOTIFICATION_EMAIL;
+}
+
+type AdminRegistrationNotificationPayload = {
+  userId: string;
+  status: string;
+  name?: string | null;
+  identifier: string;
+  identifierType: 'email' | 'phone';
+  createdAt?: Date | string;
+};
+
+export async function sendAdminRegistrationNotification(payload: AdminRegistrationNotificationPayload) {
+  const to = getAdminNotificationEmail();
+  const createdAtIso =
+    payload.createdAt instanceof Date
+      ? payload.createdAt.toISOString()
+      : (payload.createdAt || new Date().toISOString());
+
+  const subject = `New account registration (${payload.status})`;
+  const textContent = [
+    'A new account was created.',
+    '',
+    `Time: ${createdAtIso}`,
+    `User ID: ${payload.userId}`,
+    `Status: ${payload.status}`,
+    `Name: ${payload.name || '(not provided)'}`,
+    `${payload.identifierType === 'email' ? 'Email' : 'Phone'}: ${payload.identifier}`,
+  ].join('\n');
+
+  return await sendTextEmail(to, subject, textContent);
+}
+
+type AdminOrderNotificationPayload = {
+  orderNumber: string;
+  orderType: string;
+  total: number;
+  itemCount: number;
+  userId: string;
+  customerName?: string | null;
+  customerEmail?: string | null;
+  customerPhone?: string | null;
+  createdAt?: Date | string;
+};
+
+export async function sendAdminOrderNotification(payload: AdminOrderNotificationPayload) {
+  const to = getAdminNotificationEmail();
+  const createdAtIso =
+    payload.createdAt instanceof Date
+      ? payload.createdAt.toISOString()
+      : (payload.createdAt || new Date().toISOString());
+
+  const subject = `New order created: ${payload.orderNumber}`;
+  const textContent = [
+    'A new order was created.',
+    '',
+    `Time: ${createdAtIso}`,
+    `Order #: ${payload.orderNumber}`,
+    `Order type: ${payload.orderType}`,
+    `Total: $${Number.isFinite(payload.total) ? payload.total.toFixed(2) : String(payload.total)}`,
+    `Items: ${payload.itemCount}`,
+    `User ID: ${payload.userId}`,
+    `Customer name: ${payload.customerName || '(not provided)'}`,
+    `Customer email: ${payload.customerEmail || '(not provided)'}`,
+    `Customer phone: ${payload.customerPhone || '(not provided)'}`,
+  ].join('\n');
+
+  return await sendTextEmail(to, subject, textContent);
+}
