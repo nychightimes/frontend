@@ -2,6 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
+import Link from 'next/link';
 import { signIn, useSession } from 'next-auth/react';
 
 import { Header } from '@/components/layout/Header';
@@ -291,7 +292,12 @@ function RegisterContent() {
                   </div>
 
                   <div className="space-y-2">
-                    <Label htmlFor="login-password">Password</Label>
+                    <div className="flex items-center justify-between">
+                      <Label htmlFor="login-password">Password</Label>
+                      <Link href="/forgot-password" className="text-sm text-primary hover:underline">
+                        Forgot password?
+                      </Link>
+                    </div>
                     <div className="relative">
                       <Lock className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
                       <Input 

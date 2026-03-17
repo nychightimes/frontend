@@ -22,6 +22,12 @@ export async function sendTextEmail(to: string, subject: string, text: string) {
   return await res.json();
 }
 
+export async function sendPasswordResetEmail(to: string, resetUrl: string) {
+  const subject = 'Reset your password';
+  const textContent = `You requested a password reset. Click the link below to set a new password:\n\n${resetUrl}\n\nThis link expires in 1 hour. If you didn't request this, please ignore this email.`;
+  return sendTextEmail(to, subject, textContent);
+}
+
 export async function sendWelcomeEmail(to: string, name?: string) {
   const res = await fetch('https://api.brevo.com/v3/smtp/email', {
     method: 'POST',

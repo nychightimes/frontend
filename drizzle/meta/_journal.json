@@ -15,6 +15,13 @@
       "when": 1769324225074,
       "tag": "0001_rare_captain_marvel",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "5",
+      "when": 1773760380628,
+      "tag": "0002_bitter_mongoose",
+      "breakpoints": true
     }
   ]
 }

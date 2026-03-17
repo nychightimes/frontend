@@ -142,6 +142,8 @@ function isPublicRoute(pathname: string): boolean {
   const publicRoutes = [
     '/register',
     '/verify-otp',
+    '/forgot-password',
+    '/reset-password',
     '/license-setup',
     '/license-invalid',
     // Debug and testing routes - accessible without authentication

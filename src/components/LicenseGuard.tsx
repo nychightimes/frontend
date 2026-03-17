@@ -15,6 +15,8 @@ function isLicenseExemptRoute(pathname: string): boolean {
     '/license-invalid',
     '/register',
     '/verify-otp',
+    '/forgot-password',
+    '/reset-password',
     // Debug and testing routes - allow access without license verification
     '/debug/',
     '/test-admin-connection'

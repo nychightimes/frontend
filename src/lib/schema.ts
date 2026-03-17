@@ -110,6 +110,15 @@ export const magicLinkUsage = mysqlTable("magic_link_usage", {
   userAgent: text("user_agent"),
 });
 
+// Password reset tokens (for forgot password flow)
+export const passwordResetTokens = mysqlTable("password_reset_tokens", {
+  id: varchar("id", { length: 255 }).primaryKey(),
+  email: varchar("email", { length: 255 }).notNull(),
+  token: varchar("token", { length: 255 }).notNull(),
+  expires: datetime("expires").notNull(),
+  createdAt: datetime("created_at").default(sql`CURRENT_TIMESTAMP`),
+});
+
 // Product Categories
 export const categories = mysqlTable("categories", {
   id: varchar("id", { length: 255 }).primaryKey(),
